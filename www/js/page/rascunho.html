@@ -1,0 +1,66 @@
+function listaCidades(data){
+  var uf = $("#ufs").val()
+  var listab = $("#cidades"); 
+  listab.empty();
+  listab.append('<option value="0"></option>') 
+  for (var i in data){
+    for (var j in data[i]){
+      if (data[i][j]["estado"] == uf) {
+        listab.append('<option value="'+ data[i][j]["cidade"] +'">'+ data[i][j]["cidade"] +'</option>')  
+      }
+    }
+  }
+  document.getElementById('cidades').value=(localidade);
+}
+
+if (Formulario[0][3]["value"] == "") {
+  Toast("Digite seu cep")
+} else if (Formulario[0][3]["selectionStart"] < 9){
+  Toast("Cep precisa ter 8 digitos")
+}
+else if (Formulario[0][4]["value"] == 0) {
+  Toast("Selecione seu Estado")
+} 
+else if (Formulario[0][5]["value"] == 0) {
+  Toast("Digite sua Cidade")
+}
+else if (Formulario[0][6]["value"] == "") {
+  Toast("Digite seu logradouro")
+}
+else if (Formulario[0][7]["value"] == "") {
+  Toast("Digite o número da casa")
+}
+
+else if (Formulario[0][9]["value"] == "") {
+  Toast("Digite seu bairro")
+}
+
+
+      auxpessoal.cep = Formulario[0][3]["value"];
+      auxpessoal.estado = Formulario[0][4]["value"];
+      auxpessoal.cidade = Formulario[0][5]["value"];
+      auxpessoal.logradouro = Formulario[0][6]["value"];
+      auxpessoal.numero = Formulario[0][7]["value"];
+      auxpessoal.complemento = Formulario[0][8]["value"];
+      auxpessoal.bairro = Formulario[0][9]["value"];
+
+      infoPessoais[0]["cep"] = Formulario[0][3]["value"];
+      infoPessoais[0]["estado"] = Formulario[0][4]["value"];
+      infoPessoais[0]["cidade"] = Formulario[0][5]["value"];
+      infoPessoais[0]["logradouro"] = Formulario[0][6]["value"];
+      infoPessoais[0]["numero"] = Formulario[0][7]["value"];
+      infoPessoais[0]["complemento"] = Formulario[0][8]["value"];
+      infoPessoais[0]["bairro"] = Formulario[0][9]["value"];
+
+
+      '<div class="progress mx-auto" data-value='80'>'
+      +'  <span class="progress-left">'
+      +'                <span class="progress-bar" style="color: red;"></span>'
+      +'  </span>'
+      +'  <span class="progress-right">'
+      +'                <span class="progress-bar" style="color: red;"></span>'
+      +'  </span>'
+      +'  <div class="progress-value w-100 h-100 rounded-circle d-flex align-items-center justify-content-center">'
+      +'    <img src="img/miniatura.jpg"/>'
+      +'  </div>'
+      +'</div>'

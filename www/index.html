@@ -1,0 +1,1347 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: gap: content:">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="theme-color" content="#2196f3">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="msapplication-tap-highlight" content="no">
+  <meta http-equiv="Content-Type" content="text/html>
+
+  <title></title>
+
+  <link rel="stylesheet" href="css/framework7.bundle.css">
+  <link rel="stylesheet" href="css/framework7.bundle.min.css">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/framework7-icons.css">
+  <script type="text/javascript" src="http://platform.twitter.com
+/widgets.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Quicksand:300,600&display=swap" rel="stylesheet">
+  
+  
+  
+</head>
+
+<body>
+  <div id="app" class="tabs">
+    <div class="statusbar"></div>
+
+
+
+
+
+    <!---------------------------------------------------------------------------------------------------------------------------------->
+    <!--                                                   Principal                                                                  -->
+    <!---------------------------------------------------------------------------------------------------------------------------------->
+      <div class="view view-principal  fadeIn tab tab-active">
+        <!---------------------------------------------------------------------------------------------------------------------------------->
+        <!--                                                      Home                                                                    -->
+        <!---------------------------------------------------------------------------------------------------------------------------------->
+          <div class="page home" data-name="home" id="home">
+            <div class="page-content">
+              <!--Foto e nome da noiva + data do evento-->
+              <div class="page1" id="page1">
+                <div class="card">
+                  <div class="card-content">
+                    <div class="list media-list">
+                      <ul>
+                        <li class="item-content">
+                          <div class="item-media" id="imgperfilnoiva"><img src="" /></div>
+                          <div class="item-inner">
+                            <div class="item-title-row">
+                              <div class="item-title" style="color: white;" id="nomenoiva"><b></b></div>
+                            </div>
+                            <div class="item-subtitle" style="color: white;" id="dataevento"><b></b></div>
+                          </div>
+                          <div class="item-after">
+                            <!--botão compartilhar-->
+                            <div class="fab fab-top-button color-red">
+                              <a class="button popup-open" href="#" data-popup=".popup-about">
+                                <img src="img/compartilhar.png" alt="">
+                              </a>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--botões de compartilhamento-->
+              <div class="popup popup-about">
+                <div class="block">
+                  <p>Compartilhar</p>
+                  <!-- Close Popup -->
+                  <p>
+                    <a id="twit" onclick= "window.open('https://twitter.com/intent/tweet?url=https://sistemaagely.com.br:8245/chadelingerieApp/www/&text=chá de lingerie')" class="link popup-close fab-close color-transparent">
+                      <span><img src="img/twitter.png" alt=""></span>
+                    </a>
+                    
+                    <a id="face" onclick= "window.open('http://www.facebook.com/sharer/sharer.php?u=https://sistemaagely.com.br:8245/chadelingerieApp/www/')" class="link popup-close fab-close">
+                      <span><img src="img/facebook.png" alt=""></span>
+                    </a>
+                    
+                    <a id="zap" onclick= "window.open('https://api.whatsapp.com/send?text=https://sistemaagely.com.br:8245/chadelingerieApp/www/')" class="link popup-close fab-close color-green">
+                      <span><img src="img/whats_app.png" alt=""></span>
+                    </a>
+                  </p>
+                </div>
+              </div>
+              <!-- foto, nome, data do evento e botão para acesso ao instagram,
+              botão confirmar presença, foto dos confirmados e msg de boas vindas-->
+              <div class="page2" id="page2">
+                <div class="row1" id="row1imagem">
+                  <div class="row2">
+                    <div class="col1-100" id="col1-100imagem">
+                      <div class="fab fab-center-button color-transparent">
+                        <a onclick="window.open('https://www.instagram.com/')">
+                          <img width="100%" height="100%" src="img/instagram.jpg" alt="">
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row3">
+                    <div class="card">
+                      <div class="card-content">
+                        <div class="list media-list">
+                          <ul>
+                            <li class="item-content">
+                              <div class="item-media" id="imagemperfilnoiva1">
+                                <!--barra circular de meta atingida-->
+                                <div
+                                  class="gauge gauge-init"
+                                  id="porcentagem"
+                                  data-type="circle"
+                                  data-value="0"
+                                  data-border-color="#f30d0d"
+                                  ><img class="fotonoiva" src="">
+                                </div>  
+                              </div>
+                              <div class="data-text"></div>
+                              <div class="item-inner">
+                                <div class="item-title-row">
+                                  <div class="item-title" id="nomenoiva1"><b></b></div>
+                                </div>
+                                <div class="item-subtitle" id="dataevento1"><b></b></div>
+                              </div>
+                              <div class="item-after">
+                                <div class="col1-10">
+                                  <a onclick="onClickcurtirpagina()" class="curtirpagina" id="curtirpagina"
+                                    style="display: block;"><img class="coracao" src="img/coracao.png" alt=""></a>
+                                  <a onclick="" class="curtirpagina" id="curtirpagina1" style="display: none;"><img
+                                      class="coracao1" src="img/coracao1.jpg" alt=""></a>
+                                  <a onclick="" class="btnnotif" id="btnnotif"><img class="sino" src="img/sino.jpg" alt="">
+                                    <span class="descricao"></span></a>
+                                </div>
+                                <span class="curtir" id="curtidas" style="font-size: small;">0</span>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <h1 class="titulo" id="titulo"><strong>Bem vindos ao meu Chá de Lingerie!</strong></h1>
+                  <p class="mensagem" id="mensagem">
+                    
+                  </p>
+                  <!--contagem de confirmados-->
+                  <a class="confirmar" id="confirmados" style="color: black;">Confirmados (0)</a>
+                  <a onclick="onClickConfirmados()" class="todos" id="todos">Ver todos</a>
+                  <div class="todosconfirmados" id="todosconfirmados">
+                    <div class="ecran" id="ecran"
+                      style="overflow: scroll; overflow-y: hidden; overflow-x: hidden; white-space: nowrap; display: block;">
+                      <!--fotos dos ultimos confirmados-->
+                      <img src="img/miniatura.jpg" class="miniatura" />
+                      <img src="img/logo.png" class="miniatura" />
+                      <img src="img/miniatura.jpg" class="miniatura" />
+                      <img src="img/logo.png" class="miniatura" />
+                      <img src="img/miniatura.jpg" class="miniatura" />
+                      <img src="img/logo.png" class="miniatura" />
+                      <img src="img/miniatura.jpg" class="miniatura" />
+                      <img src="img/logo.png" class="miniatura" />
+                      <img src="img/miniatura.jpg" class="miniatura" />
+                    </div>
+                    <div class="ecran" id="ecran1"
+                      style="overflow: scroll; overflow-y: hidden; white-space: nowrap; display: none;">
+                      <!--fotos de todos os confirmados-->
+                      <img src="img/miniatura.jpg" class="miniatura" />
+                      <img src="img/logo.png" class="miniatura" />
+                      <img src="img/miniatura.jpg" class="miniatura" />
+                      <img src="img/logo.png" class="miniatura" />
+                      <img src="img/miniatura.jpg" class="miniatura" />
+                      <img src="img/logo.png" class="miniatura" />
+                      <img src="img/miniatura.jpg" class="miniatura" />
+                      <img src="img/logo.png" class="miniatura" />
+                      <img src="img/miniatura.jpg" class="miniatura" />
+                      <img src="img/logo.png" class="miniatura" />
+                      <img src="img/miniatura.jpg" class="miniatura" />
+                    </div>
+                  </div>
+                  <div class="row4">
+                    <button class="col button button-fill button-round color-red" onclick="onClickconfirmar()">Confirmar
+                      Presença</button>
+                  </div>
+                </div>
+              </div>
+              <!--álbum de fotos, comentários e botão para ver lista de presentes-->
+              <div class="page3" id="page3">
+                <div class="album" id="album">
+                  <div class="swiper-container swiper-init demo-swiper" id="albumFotos">
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-wrapper">
+                     
+                      
+                    </div>
+                  </div>
+                  
+                  <!--botão curtir álbum-->
+                  <a onclick="onClickcurtiralbum()" class="curtiralbum" id="curtiralbum" style="display: block;"><img
+                      class="coracao" src="img/coracao.png" alt=""></a>
+                  <!--botão álbum curtido-->
+                      <a onclick="" class="curtiralbum" id="curtiralbum1" style="display: none;"><img class="coracao"
+                      src="img/coracao1.jpg" alt=""></a>
+                  <span class="curtidasalbum" id="curtidasalbum">0</span>
+                  <a class="comentario"><img class="coment" src="img/coments.jpg" alt=""></a>
+                  <span class="comentarioalbum" id="comentarioalbum">0</span>
+                </div>
+                <!--lista dos últimos comentários-->
+                <div class="list media-list" id="listcomentarios"
+                  style="display: block; overflow: scroll; overflow-y: hidden; overflow-x: hidden; ">
+                  <ul>
+                    <!--foto, nome e texto dos últimos comentários feitos-->
+                    <li>
+                      <div class="item-content">
+                        <div class="item-media" id="fotoconvidcoment"><img src="img/miniatura.jpg" width="44" /></div>
+                        <div class="item-inner">
+                          <div class="item-title-row">
+                            <div class="item-title" id="nomeconvidcoment">João Victor Bellini</div>
+                          </div>
+                          <div class="item-text" id="txtconvidcoment">Parceira, companheira, amiga, Te amo!</div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="item-content">
+                        <div class="item-media" id="fotoconvidcoment"><img src="img/miniatura.jpg" width="44" /></div>
+                        <div class="item-inner">
+                          <div class="item-title-row">
+                            <div class="item-title" id="nomeconvidcoment">João Victor Bellini</div>
+                          </div>
+                          <div class="item-text" id="txtconvidcoment">Parceira, companheira, amiga, Te amo!</div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="item-content">
+                        <div class="item-media" id="fotoconvidcoment"><img src="img/miniatura.jpg" width="44" /></div>
+                        <div class="item-inner">
+                          <div class="item-title-row">
+                            <div class="item-title" id="nomeconvidcoment">João Victor Bellini</div>
+                          </div>
+                          <div class="item-text" id="txtconvidcoment">Parceira, companheira, amiga, Te amo!</div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="item-content">
+                        <div class="item-media" id="fotoconvidcoment"><img src="img/miniatura.jpg" width="44" /></div>
+                        <div class="item-inner">
+                          <div class="item-title-row">
+                            <div class="item-title" id="nomeconvidcoment">João Victor Bellini</div>
+                          </div>
+                          <div class="item-text" id="txtconvidcoment">Parceira, companheira, amiga, Te amo!</div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="item-content">
+                        <div class="item-media" id="fotoconvidcoment"><img src="img/miniatura.jpg" width="44" /></div>
+                        <div class="item-inner">
+                          <div class="item-title-row">
+                            <div class="item-title" id="nomeconvidcoment">João Victor Bellini</div>
+                          </div>
+                          <div class="item-text" id="txtconvidcoment">Parceira, companheira, amiga, Te amo!</div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <!--lista de todos os comentários-->
+                <div class="list media-list" id="listcomentarios1"
+                  style="display: none; overflow: auto; overflow-x: hidden;">
+                  <ul>
+                    <!--foto, nome e texto de todos os comentários feitos-->
+                    <li>
+                      <div class="item-content">
+                        <div class="item-media" id="fotoconvidcoment"><img src="img/miniatura.jpg" width="44" /></div>
+                        <div class="item-inner">
+                          <div class="item-title-row">
+                            <div class="item-title" id="nomeconvidcoment">João Victor Bellini</div>
+                          </div>
+                          <div class="item-text" id="txtconvidcoment">Parceira, companheira, amiga, Te amo!</div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="item-content">
+                        <div class="item-media" id="fotoconvidcoment"><img src="img/miniatura.jpg" width="44" /></div>
+                        <div class="item-inner">
+                          <div class="item-title-row">
+                            <div class="item-title" id="nomeconvidcoment">João Victor Bellini</div>
+                          </div>
+                          <div class="item-text" id="txtconvidcoment">Parceira, companheira, amiga, Te amo!</div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="item-content">
+                        <div class="item-media" id="fotoconvidcoment"><img src="img/miniatura.jpg" width="44" /></div>
+                        <div class="item-inner">
+                          <div class="item-title-row">
+                            <div class="item-title" id="nomeconvidcoment">João Victor Bellini</div>
+                          </div>
+                          <div class="item-text" id="txtconvidcoment">Parceira, companheira, amiga, Te amo!</div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="item-content">
+                        <div class="item-media" id="fotoconvidcoment"><img src="img/miniatura.jpg" width="44" /></div>
+                        <div class="item-inner">
+                          <div class="item-title-row">
+                            <div class="item-title" id="nomeconvidcoment">João Victor Bellini</div>
+                          </div>
+                          <div class="item-text" id="txtconvidcoment">Parceira, companheira, amiga, Te amo!</div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="item-content">
+                        <div class="item-media" id="fotoconvidcoment"><img src="img/miniatura.jpg" width="44" /></div>
+                        <div class="item-inner">
+                          <div class="item-title-row">
+                            <div class="item-title" id="nomeconvidcoment">João Victor Bellini</div>
+                          </div>
+                          <div class="item-text" id="txtconvidcoment">Parceira, companheira, amiga, Te amo!</div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <a onclick="onClickcomentarios()" class="comentsalbum" id="comentsalbum">Ver todos os comentários</a>
+                <div class="list no-hairlines-md">
+                  <ul>
+                    <li class="item-content item-input">
+                      <div class="item-media" id="fotoconvidado"> <!--foto de quem comentou-->
+                        <img src="" width="44" />
+                      </div>
+                      <div class="item-inner">
+                        <div class="item-input-wrap">
+                          <!--campo para digitar o comentário-->
+                          <textarea id="comentalbum" placeholder="Adicione um comentário"></textarea>
+                        </div>
+                        <div class="fab fab-right-bottom color-white">
+                          <a style="width: 24px; height: 24px;" onclick="onClickcomentalbum()">
+                            <i class="icon icon-next color-black"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="listapresentes"><br />
+                  <img class="dagua" src="img/sutia.png" />
+                  <div class="row" id="listpres"><b>
+                      <h2>Lista de Presentes</h2>
+                    </b></div>
+                  <div class="row" id="txtajudar">Vamos ajudar galera, conto com vocês!!!</div><br />
+                  <div class="botao"><button class="col button button-fill button-round color-white"
+                      style="text-align: center;" onclick="Listas.listaProdutos()">
+                      <div class="row">
+                        <div class="col-30" style="text-align: right;"><img src="img/presente.jpg" alt="" width="26"
+                            height="32"></div>
+                        <div class="col-70" style="text-align: left;">
+                          <h4 style="color: red;">Ver Lista</h4>
+                        </div>
+                      </div>
+                    </button></div>
+                  <br />
+                </div>
+              </div>
+              <!--mapa, local do evento e mural de recados-->
+              <div class="page4" id="page4">
+                <div class="localdoevento" style="text-align: center;"><br />
+                  <div class="row1" style="text-align: center;"><b>
+                      <h2>Local do Evento</h2>
+                    </b></div>
+                  <table class="local">
+                    <tr>
+                      <td id="rua">Maria Abadia A. Malagutti</td>
+                      <td>,</td>
+                      <td id="numero">240</td>
+                      <td> - </td>
+                      <td id="bairro">Vl Formosa</td>
+                    </tr>
+                  </table>
+                  <table class="local1">
+                    <tr>
+                      <td id="cidade">São Sebastião do Paraíso</td>
+                      <td> - </td>
+                      <td id="estado">MG</td>
+                    </tr>
+                  </table>
+                </div>
+                <div class="mapa">
+                  <iframe class='map-google'
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14906.4738847273!2d-46.990228699999996!3d-20.9276641!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-BR!2sbr!4v1581696670169!5m2!1spt-BR!2sbr"
+                    width="100%" height="300" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                  <div class="rotas"><button class="col button button-fill button-round color-red"
+                      onclick="window.open('https://maps.google.com/maps?ll=-20.927664,-46.990229&amp;z=14&amp;t=m&amp;hl=pt-BR&amp;gl=BR&amp;mapclient=embed');">
+                      <h4>Traçar Rota</h4>
+                    </button></div>
+                </div>
+                <div class="muralderecados"><br />
+                  <div class="row1" style="text-align: center;"><b>
+                      <h2>Mural de Recados</h2>
+                    </b></div><br />
+                </div>
+                <!--lista mostrando os ultimos recados-->
+                <div class="list media-list" id="listrecados"
+                  style="display: block; overflow: scroll; overflow-x: hidden; overflow-y: hidden;">
+                  <ul>
+                    <li>
+                      <div class="item-content">
+                        <div class="item-media" id="fotoconvidrecados"><img src="img/miniatura.jpg" width="44" /></div>
+                        <div class="item-inner">
+                          <div class="item-title-row">
+                            <div class="item-title" id="nomeconvidrecados">João Victor Bellini</div>
+                          </div>
+                          <div class="item-text" id="txtconvidrecados">Parceira, companheira, amiga, Te amo!</div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="item-content">
+                        <div class="item-media"><img src="img/miniatura.jpg" width="44" /></div>
+                        <div class="item-inner">
+                          <div class="item-title-row">
+                            <div class="item-title">João Victor Bellini</div>
+                          </div>
+                          <div class="item-text">Parceira, companheira, amiga, Te amo!</div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="item-content">
+                        <div class="item-media"><img src="img/miniatura.jpg" width="44" /></div>
+                        <div class="item-inner">
+                          <div class="item-title-row">
+                            <div class="item-title">João Victor Bellini</div>
+                          </div>
+                          <div class="item-text">Parceira, companheira, amiga, Te amo!</div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="item-content">
+                        <div class="item-media"><img src="img/miniatura.jpg" width="44" /></div>
+                        <div class="item-inner">
+                          <div class="item-title-row">
+                            <div class="item-title">João Victor Bellini</div>
+                          </div>
+                          <div class="item-text">Lindos, amo muito, fiquei apaixonado!</div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <!--lista mostrando todos os recados-->
+                <div class="list media-list" id="listrecados1" style="display: none; overflow: scroll; overflow-x: hidden;">
+                  <ul>
+                    <li>
+                      <div class="item-content">
+                        <div class="item-media" id="fotoconvidrecados"><img src="img/miniatura.jpg" width="44" /></div>
+                        <div class="item-inner">
+                          <div class="item-title-row">
+                            <div class="item-title" id="nomeconvidrecados">João Victor Bellini</div>
+                          </div>
+                          <div class="item-text" id="txtconvidrecados">Parceira, companheira, amiga, Te amo!</div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="item-content">
+                        <div class="item-media"><img src="img/miniatura.jpg" width="44" /></div>
+                        <div class="item-inner">
+                          <div class="item-title-row">
+                            <div class="item-title">João Victor Bellini</div>
+                          </div>
+                          <div class="item-text">Parceira, companheira, amiga, Te amo!</div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="item-content">
+                        <div class="item-media"><img src="img/miniatura.jpg" width="44" /></div>
+                        <div class="item-inner">
+                          <div class="item-title-row">
+                            <div class="item-title">João Victor Bellini</div>
+                          </div>
+                          <div class="item-text">Parceira, companheira, amiga, Te amo!</div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="item-content">
+                        <div class="item-media"><img src="img/miniatura.jpg" width="44" /></div>
+                        <div class="item-inner">
+                          <div class="item-title-row">
+                            <div class="item-title">João Victor Bellini</div>
+                          </div>
+                          <div class="item-text">Lindos, amo muito, fiquei apaixonado!</div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <a class="recados" id="recados" onclick="onClickrecados()">Ver todos os comentários</a>
+                <div class="list no-hairlines-md">
+                  <ul>
+                    <li class="item-content item-input">
+                      <div class="item-media" id="fotoconvidado1">
+                        <img src="" width="44" />
+                      </div>
+                      <div class="item-inner">
+                        <div class="item-input-wrap">
+                          <!--escreve o recado-->
+                          <textarea id="recadoalbum" placeholder="Adicione um comentário"></textarea>
+                        </div>
+                        <div class="fab fab-right-bottom color-white">
+                          <a style="width: 24px; height: 24px;" onclick="onClickrecadoalbum()">
+                            <i class="icon icon-next color-black"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              
+              </div>
+            </div>
+          </div>
+        <!---------------------------------------------------------------------------------------------------------------------------------->
+        <!--                                                      Lista de Presentes                                                                    -->
+        <!---------------------------------------------------------------------------------------------------------------------------------->
+          <div class="page listapresentes stacked" data-name="listapresentes" id="listapresentes">
+            <div class="page-content">
+              <!--topo da página com botões linha noite e menor preço-->
+              <div class="listapresentes">
+                <img class="dagua" src="img/sutia.png" />
+                <div class="row" id="listpres"><b>
+                    <h2>Lista de Presentes</h2>
+                  </b></div>
+                <div class="row" id="txtajudar">Vamos ajudar galera, conto com vocês!!!</div><br />
+                <!--botão linha noite-->
+                <div class="btnnoite"><button class="col button button-fill button-round color-red"
+                    style="text-align: center; height: 30px;" onclick="">
+                    <h6 style="color: white;">Linha Noite</h6>
+                  </button>
+                </div>
+                    <!--botão menor preço-->
+                <div class="btnpreco"><button class="col button button-fill button-round color-red"
+                    style="text-align: center; height: 30px;" onclick="menorPreco()">
+                    <h6 style="color: white;">Menor Preço</h6>
+                  </button>
+                  <input type="hidden" id="objmenor">
+                </div>
+              </div>
+              <!--lista das lingeries-->
+              <div class="list media-list" id="listlingeries"
+                style="display: block; overflow: auto; overflow-x: hidden;  text-align: center;">
+                <ul class="row">
+
+                </ul>
+              </div>
+              <!--carrinho de compras-->
+              
+              <!--botão backpage-->
+              <div class="fab fab-left-top-button color-white">
+                <a onclick="LoadPage('home')"><i class="icon f7-icons color-black">arrow_left</i></a>
+              </div>
+              <!--botão de filtro para linha noite e menor e maior valor que cli deseja pagar-->
+              <div class="list" id="filtro" style="background-color: rgb(223, 221, 221); display: none;">
+                <div class="row" style="width: 90%; margin-left: 5%;"><b>Filtros</b></div><br /><br />
+                <div class="row" style="width: 90%; margin-left: 5%;"><b>Categorias</b></div>
+                <div class="row" style="width: 90%; margin-left: 5%;">
+                  <div class="col-30">
+                    <select name="categorias" id="categ">
+                      <option value="Linha Noite" selected>Linha Noite</option>
+                      <option value="Linha Dia">Linha Dia</option>
+                    </select>
+                  </div>
+                </div><br />
+                <div class="row" style="width: 90%; margin-left: 5%;"><b>Preço</b></div>
+                <!--slider com menor e maior preço À pagar-->
+                <div class="intpreco" id="intpreco">
+                  <div class="rangeslider">
+                    <input id="min" class="min" name="range_1" type="range" min="1" max="1000"  value="0" />
+                    <input id="max" class="max" name="range_1" type="range" min="1" max="1000"  value="1000" />
+                    <span id="rangemin" class="range_min light left">0</span>
+                    <span id="rangemax" class="range_max light right">1000</span>  
+                  </div>
+                  <input type="hidden" id=objprecosmin value="0">
+                  <input type="hidden" id=objprecosmax value="1000">
+                </div>  
+                <br />
+                <div class="row" style="width: 80%; margin-left: 10%;">
+                  <div class="col-50">
+                    <button class="col button button-fill button-round color-red" id="btnlimpar" onclick="MinMax()">
+                      <h5 style="color: white;">Limpar</h5>
+                    </button>
+                  </div>
+                  <div class="col-50">
+                    <button class="col button button-fill button-round color-red" id="btnaplicar" onclick="Aplicar()">
+                      <h5 style="color: white;">Aplicar</h5>
+                    </button>
+                  </div>
+                </div>
+                <br />
+              </div>
+              <!--botão filtro-->
+              <div class="fab fab-right-top-button color-white">
+                <a onclick="AbreFiltro()"><img src="img/filtro.jpg" width="60%"></a>
+              </div>
+              <!--botão carrinho-->
+              <!--
+              <div class="fab fab-right-top-button1 color-white">
+                <a onclick="AbreCarrinho1()"><img src="img/carrinho.png" width="50%"></a>
+              </div>
+              -->
+              <div class="fab fab-right-top-button1 color-white">
+                <a onclick="listaCarrinho()"><img src="img/carrinho.png" width="50%"></a>
+              </div>
+            </div>
+          </div>
+          
+        <!---------------------------------------------------------------------------------------------------------------------------------->
+        <!--                                                      Presente Selecionado                                                                    -->
+        <!---------------------------------------------------------------------------------------------------------------------------------->
+          <div class="page presenteselect stacked" data-name="presenteselect" id="presenteselect">
+            <div class="page-content">
+              <!-- dados da lingerie escolhida -->
+              <div class="list media-list" id="listlingerie" style="overflow: auto; overflow-x: hidden;">
+                <div class="swiper-container swiper-init demo-swiper" id="listFotos">
+                  <div class="swiper-pagination"></div>
+                  <div class="swiper-wrapper">
+                   
+                    
+                  </div>
+                </div>
+                <div style="height: 10px;"></div>
+                <div class="row" id="nomelingerie">
+
+                </div>
+                <div class="row" id="lblmarca">
+                  <div class="col-50">
+                    <h5>Marca:</h5>
+                  </div>
+                  <div class="col-50">
+                    <h5 id="marca"></h5>
+                  </div>
+                </div>
+                <div class="row" id="lblref">
+                  <div class="col-50">
+                    <h5>Refer:</h5>
+                  </div>
+                  <div class="col-50">
+                    <h5 id="ref"></h5>
+                  </div>
+                </div>
+                <div class="lbltamanho">
+                  <h5>Tamanhos:</h5>
+                </div>
+                <div class="row" id="tamanhos">
+                  
+                </div>
+                <div style="height: 8px;"></div>
+                <div class="lblqtde">
+                  <h5>Quantidade:</h5>
+                  <div class="stepper stepper-round stepper-init" id="qtde">
+                    
+                  </div>
+                </div>
+                
+                <!--<div class="row" id="tipo">
+                  <h6 style="color: rgb(170, 166, 166);">Linha noite / Lingerie</h6>
+                </div>
+                <div style="height: 10px;"></div>
+                <div class="row" id="caracterlingerie">
+                  <h6>Tamanhos</h6>
+                  <h6 class="tamanho" id="tamanho">PP</h6>
+                  <h6 >Cor</h6>
+                      <h6 class="cor" id="cor"><img src="img/cor.jpg"></h6>
+                  </div><br/>
+                  <div class="descricao"><b>Descrição</b></div>
+                  <p class="txtdescricao" id="txtdescricao">
+                    A modelagem push-up rendada nas alças já é um clássico, porém fashionista, com aquele toque
+                    de sofisticação, trazendo toda a exuberância das peças outwear, ideais para a estação.
+                  </p> -->
+              </div>
+              <!--
+              <div class="list media-list" id="carrinho"
+                style="overflow: auto; overflow-x: hidden; background-color: rgb(223, 221, 221);">
+                <div class="row" id="seucarrinho" style="background-color: rgb(223, 221, 221); color: black; ">Meu Carrinho
+                </div>
+                <ul style="background-color: rgb(223, 221, 221); color: black;">
+                  
+                </ul>
+                <div class="row" id="total" style="background-color: rgb(223, 221, 221); color: black;">
+                  <h4 class="valor" id="valortotal"></h4>
+                  <h5 class="qtd" id="qtd"></h5>
+                  <h5 class="itens">ítem(s)</h5>
+                </div>
+                <br/>
+                <div class="btncontinua">
+                  <button class="col button button-fill button-round color-red" id="btncontinuar"
+                    style="text-align: center;" onclick="continuar();">
+                    <h4>Continuar Comprando</h4>
+                  </button>
+                </div>
+                <div class="btncompra">
+                  <button class="col button button-fill button-round color-red" id="btncomprar"
+                    style="text-align: center;" onclick="LoadPage('finalcar');">
+                    <h4>Finalizar Compra</h4>
+                  </button>
+                </div>
+                <div class="row" id="limpacarrinho">
+                  <a onclick="limpaCarrinho()">Limpar Carrinho</a>
+                </div>
+              </div>
+              <input type="hidden" id="objcarrinho">
+              -->
+              <div class="listapresentes"><br />
+                <div class="row" id="cotas">
+                  <!--<h6>10 cotas de:</h6>-->
+                </div>
+                <div class="row" id="preco">
+                  <h6 class="valor" id="valorGeral"></h6>
+                </div>
+                <!--botão de presentear-->
+                <div class="botao"><button class="col button button-fill button-round color-white" id="botaopres"
+                    style="text-align: center;" onclick="adicionaCarrinho()">
+                    <div class="row">
+                      <div class="col-30" style="text-align: right;"><img src="img/presente.jpg" alt="" width="26"
+                          height="32"></div>
+                      <div class="col-70" style="text-align: left;">
+                        <h4 style="color: red;">Presentear</h4>
+                      </div>
+                    </div>
+                  </button></div>
+                <br />
+              </div>
+              <!--retorna a pagina-->
+              <div class="fab fab-left-top-button color-white">
+                <a onclick="Listas.listaProdutos()"><i class="icon f7-icons color-black">arrow_left</i></a>
+              </div>
+              <!--botão de carrinho e compartilhamento-->
+              <div class="fab fab-right-top-button color-white">
+                <a onclick="listaCarrinho()"><img src="img/carrinho.png" width="60%"></a>
+              </div>
+              <div class="fab fab-right-top-button1 color-white">
+                <a class="button popup-open" href="#" data-popup=".popup-about"><img src="img/compart.png" alt=""></a>
+              </div><br />
+            </div>
+          </div>
+        <!---------------------------------------------------------------------------------------------------------------------------------->
+        <!--                                                      Carrinho - Informações - Agradecimento                                                  -->
+        <!---------------------------------------------------------------------------------------------------------------------------------->
+          <div class="page final stacked" data-name="final" id="final" style="background-color: red;">
+            <div class="page-content">
+              <div class="container" style="background-color: red; text-align: center;">
+                <img src="img/presente.png" alt=""><br /><br />
+                <label style="color: white;">OBRIGADA!</label><br />
+                <p style="color: white;">Parabéns! Você acaba de presentear</p>
+                <div id="nomeNoiva" style="color: white;"><strong id="nomedanoiva"></strong></div>
+                <div id="total" style="color: white;">com <strong>R$ </strong><strong id="vlrtotal"></strong> em
+                  presentes!</div>
+              </div><br /><br /><br /><br />
+              <button class="col button button-fill button-round color-white" id="btncontinuarcpr"
+                style="text-align: center; color: red;" onclick="limpaCarrinho()">Continuar
+                Presenteando</button><br />
+              <button class="col button button-fill button-round color-red popup-open" 
+                href="#" data-popup=".popup-about" id="btncompartilharcpr"
+                style="text-align: center; color: white;" onclick="">Compartilhar</button>
+            </div>
+          </div>
+          <div class="page carrinhofinal stacked" data-name="carrinhofinal" id="carrinhofinal">
+            <div class="page-content"><br/>
+              <div class="row" id="guiafinal">
+                <div class="col-25">
+                  <strong>1 - Meu carrinho</strong>
+                </div>
+                <div class="col-30" style="color: gray;">
+                  2 - Minhas Informações 
+                </div>
+                <div class="col-20" style="color: gray;">
+                  3 - Pagamento
+                </div>
+                <div class="col-25" style="color: gray;">
+                  4 - Confirmação
+                </div>
+              </div>
+              <div class="row" id="seucarrinho" style="color: black">
+                <div class="col-50">
+                  <strong>1 - </strong>Meu carrinho
+                </div>
+              </div>
+              <div class="list media-list" id="carrinho"
+                style="overflow: auto; overflow-x: hidden;">
+                <ul style="color: black;">
+                  
+                </ul>
+                <div class="row" id="total" style="color: black;">
+                  <h4 class="valor" id="valortotal"></h4>
+                  <h5 class="qtd" id="qtd"></h5>
+                  <h5 class="itens">ítem(s)</h5>
+                </div>
+                <br/>
+                <div class="btncontinua">
+                  <button class="col button button-fill button-round color-red" id="btncontinuar"
+                    style="text-align: center;" onclick="LoadPage('listapresentes');">
+                    <h4>Continuar Comprando</h4>
+                  </button>
+                </div>
+                <div class="row" style="height: 10px;"></div>
+                <div class="btncompra">
+                  <button class="col button button-fill button-round color-red" id="btncomprar"
+                    style="text-align: center;" onclick="Listas.listaEstados();">
+                    <h4>Finalizar Compra</h4>
+                  </button>
+                </div>
+                <div class="row" id="limpacarrinho">
+                  <a onclick="limpaCarrinho()">Limpar Carrinho</a>
+                </div>
+              </div>
+              <input type="hidden" id="objcarrinho">                 
+            </div>
+          </div>
+          <div class="page minhasinformacoes stacked" data-name="minhasinformacoes" id="minhasinformacoes">
+            <div class="page-content"><br/>
+              <div class="row" id="guiafinal"> 
+                <div class="col-25" onclick="listaCarrinho()">
+                  <strong>1 - Meu carrinho</strong>
+                </div>
+                <div class="col-35">
+                  <strong>2 - Minhas Informações</strong>
+                </div>
+                <div class="col-20" style="color: gray;">
+                  3 - Pagamento  
+                </div>
+                <div class="col-20" style="color: gray;">
+                  4 - Confirmação
+                </div>
+              </div>
+              <div class="row" id="informacoes" style="color: black; ">
+                <div class="col-70">
+                  <strong>2 - </strong>Minhas informações
+                </div>
+              </div><br/>
+              <div style="height: 10px;"></div>
+              <div id="lblmsg" style="text-align: center;">
+                Preencha seus dados e deixe sua mensagem!
+              </div>
+              <form class="list no-hairlines-md" id="formpessoais">
+                <ul>
+                  <div class="item-title item-label">Nome Completo</div>
+                  <li class="item-content item-input" style="border-style: solid; border-width: 1px;">
+                    <div class="item-inner">
+                      
+                      <div class="item-input-wrap">
+                        <input type="text" name="nome">
+                      </div>
+                    </div>
+                  </li>
+                  <div style="height: 5px"></div>
+                  <div class="item-title item-label">CPF</div>
+                  <li class="item-content item-input" style="border-style: solid; border-width: 1px;">
+                    <div class="item-inner">
+                      <div class="item-input-wrap">
+                        <input id="cpf" name="cpf" type="text" onkeyup="cpfCheck(this)" maxlength="14" onkeydown="javascript: fMasc( this, mCPF );"> <span id="cpfResponse"></span>
+                      </div>
+                    </div>
+                  </li>
+                  <div style="height: 5px"></div>
+                  <div class="item-title item-label">RG</div>
+                  <li class="item-content item-input" style="border-style: solid; border-width: 1px;">
+                    <div class="item-inner">
+                      
+                      <div class="item-input-wrap">
+                        <input type="text" name="rg">
+                      </div>
+                    </div>
+                  </li>
+                  <div style="height: 5px"></div>
+                  
+                  <div class="item-title item-label">E-mail</div>
+                  <li class="item-content item-input" style="border-style: solid; border-width: 1px;">
+                    <div class="item-inner">
+                      <div class="item-input-wrap">
+                        <input type="email" name="email">
+                      </div>
+                    </div>
+                  </li>
+                  <div style="height: 5px"></div>
+                  <div class="item-title item-label">Telefone com DDD e 9 na frente</div>
+                  <li class="item-content item-input" style="border-style: solid; border-width: 1px;">
+                    <div class="item-inner">
+                      <div class="item-input-wrap">
+                        <input type="text" name="telefone" data-mask="(00) 00000-0000">
+                      </div>
+                    </div>
+                  </li>
+                  <div style="height: 5px"></div>
+                  <div class="item-title item-label">Mensagem</div>
+                  <li class="item-content item-input" style="border-style: solid; border-width: 1px;">
+                    <div class="item-inner">
+                      <div class="item-input-wrap">
+                        <textarea id="mensg" name="mensagem" maxlength="200"></textarea>
+                      </div>
+                    </div>
+                  </li>
+                  <p class="restantes">
+                    Caracteres restantes: 
+                    <span class="restante">200</span>
+                  </p>
+                </ul>
+              </form>
+              <div class="btnproximopasso">
+                <button class="col button button-fill button-round color-red" id="btnproximo"
+                  style="text-align: center;" onclick="salvarPessoa()">
+                  <h4>Próximo Passo</h4>
+                </button>
+              </div>
+              <div class="row" style="height: 5px;"></div>    
+              
+            </div>
+          </div>
+          <input type="hidden" id="objCidade">
+          <div class="page meuendereco stacked" data-name="meuendereco" id="meuendereco">
+            <div class="page-content"><br/>
+              <div class="row" id="guiafinal"> 
+                <div class="col-25" onclick="listaCarrinho()">
+                  <strong>1 - Meu carrinho</strong>
+                </div>
+                <div class="col-35">
+                  <strong>2 - Minhas Informações</strong>
+                </div>
+                <div class="col-20" style="color: gray;">
+                  3 - Pagamento  
+                </div>
+                <div class="col-20" style="color: gray;">
+                  4 - Confirmação
+                </div>
+              </div>
+              <div class="row" id="informacoes" style="color: black; ">
+                <div class="col-70">
+                  <strong>2 - </strong>Minhas informações
+                </div>
+              </div><br/>
+              <div style="height: 10px;"></div>
+              <div id="lblmsg" style="text-align: center;">
+                Preencha seu endereço.
+              </div>
+              <form class="list no-hairlines-md" id="formendereco">
+                <ul>
+                  <div class="row">
+                    <div class="col-40">
+                      <div class="item-title item-label">CEP</div>
+                      <li class="item-content item-input" style="border-style: solid; border-width: 1px;">
+                        <div class="item-inner">
+                          <div class="item-input-wrap">
+                            <input type="text" name="cep" id="cep" data-mask="00000-000">
+                          </div>
+                        </div>
+                      </li>
+                    </div>
+                    <div class="col-20">
+                      <i class="f7-icons" onclick="pesquisacep()" style="margin-top: 30px;">search</i>
+                    </div>
+                    <div class="col-40">
+                      <div class="item-title item-label">U.F</div>
+                      <li class="item-content item-input" style="border-style: solid; border-width: 1px;">
+                        <div class="item-inner">
+                          <div class="item-input-wrap input-dropdown-wrap">
+                            <select name="estado" id="ufs" disabled>
+                              
+                            </select>
+                          </div>
+                        </div>
+                      </li>
+                    </div>
+                  </div>
+                  <div style="height: 5px"></div>
+                  <div class="item-title item-label">Cidade</div>
+                      <li class="item-content item-input" style="border-style: solid; border-width: 1px;">
+                      <div class="item-inner">
+                        <div class="item-input-wrap input-dropdown-wrap">
+                          <select name="cidade" id="cidades" disabled>
+                            
+                          </select>
+                        </div>
+                      </div>
+                    </li>
+                  <div style="height: 5px"></div>
+                  <div class="row">
+                    <div class="col-70">
+                      <div class="item-title item-label">Logradouro</div>
+                      <li class="item-content item-input" style="border-style: solid; border-width: 1px;">
+                        <div class="item-inner">
+                          <div class="item-input-wrap">
+                            <input type="text" name="logradouro" id="logradouro">
+                          </div>
+                        </div>
+                      </li>
+                    </div>
+                    <div class="col-30">
+                      <div class="item-title item-label">Nº</div>
+                      <li class="item-content item-input" style="border-style: solid; border-width: 1px;">
+                        <div class="item-inner">
+                          <div class="item-input-wrap">
+                            <input type="number" name="numero">
+                          </div>
+                        </div>
+                      </li>
+                    </div>
+                  </div>
+                  <div style="height: 5px"></div>
+                  <div class="row">
+                    <div class="col-50">
+                      <div class="item-title item-label">Complemento</div>
+                      <li class="item-content item-input" style="border-style: solid; border-width: 1px;">
+                        <div class="item-inner">
+                          <div class="item-input-wrap">
+                            <input type="text" name="complemento">
+                          </div>
+                        </div>
+                      </li>
+                    </div>
+                    <div class="col-50">
+                      <div class="item-title item-label">Bairro</div>
+                      <li class="item-content item-input" style="border-style: solid; border-width: 1px;">
+                        <div class="item-inner">
+                          <div class="item-input-wrap">
+                            <input type="text" name="bairro" id="bairros">
+                          </div>
+                        </div>
+                      </li>
+                    </div>
+                  </div>
+                </ul>
+              </form>
+              <div style="height: 5px"></div>
+              <div class="btnproximopasso">
+                <button class="col button button-fill button-round color-red" id="btnproximo"
+                  style="text-align: center;" onclick="salvarEndereco()">
+                  <h4>Próximo Passo</h4>
+                </button>
+              </div>
+              <div class="row" style="height: 5px;"></div>    
+              <div class="btnvolta">
+                <button class="col button button-fill button-round color-red" id="btnvoltar"
+                  style="text-align: center;" onclick="LoadPage('carrinhofinal');">
+                  <h4>Voltar para o carrinho</h4>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="page pagamento stacked" data-name="pagamento" id="pagamento">
+            <div class="page-content"><br/>
+              <div class="row" id="guiafinal">
+                <div class="col-25" onclick="listaCarrinho()">
+                  <strong>1 - Meu carrinho</strong>
+                </div>
+                <div class="col-30" onclick="Listas.listaEstados()">
+                  <strong>2 - Minhas Informações</strong>
+                </div>
+                <div class="col-20">
+                  <strong>3 - Pagamento</strong>
+                </div>
+                <div class="col-25" style="color: gray;">
+                  4 - Confirmação
+                </div>
+              </div>
+              <div class="row" id="pagamento" style="color: black; ">
+                <div class="col-50">
+                  <strong>3 - </strong>Pagamento
+                </div>
+              </div><br/>
+              <div style="height: 10px;"></div>
+              <div id="lblmsg" style="text-align: center;">
+                Dados do Cartão de Crédito
+              </div>
+              <form class="list no-hairlines-md" id="formcredito">
+                <ul>
+                  <div class="item-title item-label">Número do cartão</div>
+                  <li class="item-content item-input" style="border-style: solid; border-width: 1px;">
+                    <div class="item-inner">
+                      
+                      <div class="item-input-wrap">
+                        <input type="text" name="numcartao" data-mask="0000 0000 0000 0000">
+                      </div>
+                    </div>
+                  </li>
+                  <div style="height: 5px;"></div>
+                  <div class="item-title item-label">Nome no cartão</div>
+                  <li class="item-content item-input" style="border-style: solid; border-width: 1px;">
+                    <div class="item-inner">
+                      
+                      <div class="item-input-wrap">
+                        <input type="text" name="nomecartao">
+                      </div>
+                    </div>
+                  </li>
+                  <div style="height: 5px;"></div>
+                  <div class="item-title item-label">Doc. de Identificação</div>
+                  <li class="item-content item-input" style="border-style: solid; border-width: 1px;">
+                    <div class="item-inner">
+                      
+                        <div class="item-input-wrap input-dropdown-wrap">
+                          <select name="tipodoc">
+                            <option value="0"></option>
+                            <option value="cpf">Nacional (CPF)</option>
+                            <option value="taxnumber">Estrangeiro (Tax Number)</option>
+                          </select>
+                        </div>
+                    </div>
+                  </li>
+                  <div style="height: 5px;"></div>
+                  <div class="item-title item-label">Nº do Documento</div>
+                  <li class="item-content item-input" style="border-style: solid; border-width: 1px;">
+                    <div class="item-inner">
+                      
+                      <div class="item-input-wrap">
+                        <input id="numdoc" name="numdoc" type="text" onkeyup="cpfCheck(this)" maxlength="14" onkeydown="javascript: fMasc( this, MCPF );"> <span id="cpfResponseb"></span>
+                      </div>
+                    </div>
+                  </li>
+                  <div style="height: 5px;"></div>
+                  <div class="item-title item-label">Validade Mês/Ano</div>
+                  <li class="item-content item-input" style="border-style: solid; border-width: 1px;">
+                    <div class="item-inner">
+                      
+                      
+                        <div class="row">
+                          <div class="col-50" style="width: 100px;">
+                            <div class="item-input-wrap input-dropdown-wrap">
+                              <select name="mes">
+                                <option value="0"></option>
+                                <option value="1">01</option>
+                                <option value="2">02</option>
+                                <option value="3">03</option>
+                                <option value="4">04</option>
+                                <option value="5">05</option>
+                                <option value="6">06</option>
+                                <option value="7">07</option>
+                                <option value="8">08</option>
+                                <option value="9">09</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="col-50" style="width: 100px;">
+                            <div class="item-input-wrap input-dropdown-wrap">
+                              <select name="ano">
+                                <option value="0"></option>
+                                <option value="2021">2021</option>
+                                <option value="2022">2022</option>
+                                <option value="2023">2023</option>
+                                <option value="2024">2024</option>
+                                <option value="2025">2025</option>
+                                <option value="2026">2026</option>
+                                <option value="2027">2027</option>
+                                <option value="2028">2028</option>
+                                <option value="2029">2029</option>
+                                <option value="2030">2030</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                      
+                    </div>
+                  </li>
+                  <div style="height: 5px;"></div>
+                  <div class="item-title item-label">Cód. de Segurança</div>
+                  <li class="item-content item-input" style="border-style: solid; border-width: 1px;">
+                    <div class="item-inner">
+                      
+                      <div class="item-input-wrap">
+                        <input type="text" name="codseg" data-mask="000">
+                      </div>
+                    </div>
+                  </li>
+                  <div style="height: 5px;"></div>
+                  <div class="item-title item-label">Nº de Parcelas</div>
+                  <li class="item-content item-input" style="border-style: solid; border-width: 1px;">
+                    <div class="item-inner">
+                      
+                        <div class="item-input-wrap input-dropdown-wrap">
+                          <select name="parcelas" id="parcelas">
+                            
+                          </select>
+                        </div>
+                    </div>
+                  </li>
+                </ul>  
+              </form>
+              <div style="height: 10px;"></div>
+              <div class="btnproximopasso">
+                <button class="col button button-fill button-round color-red" id="btnproximo"
+                  style="text-align: center;" onclick="salvarCredito();">
+                  <h4>Finalizar Pagamento</h4>
+                </button>
+              </div>
+              <div class="row" style="height: 10px;"></div>    
+              <div class="btnvolta">
+                <button class="col button button-fill button-round color-red" id="btnvoltar"
+                  style="text-align: center;" onclick="LoadPage('minhasinformacoes');">
+                  <h4>Voltar para informações</h4>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="page confirmacaopgto stacked" data-name="confirmacaopgto" id="confirmacaopgto">
+            <div class="page-content"><br/>
+              <div class="row" id="guiafinal">
+                <div class="col-25" onclick="listaCarrinho()">
+                  <strong>1 - Meu carrinho</strong>
+                </div>
+                <div class="col-30" onclick="Listas.listaEstados()">
+                  <strong>2 - Minhas Informações</strong>
+                </div>
+                <div class="col-20" onclick="LoadPage('pagamento')">
+                  <strong>3 - Pagamento</strong>
+                </div>
+                <div class="col-25">
+                  <strong>4 - Confirmação</strong>
+                </div>
+              </div>
+              <div class="row" id="confirmacao" style="color: black; ">
+                <div class="col-90">
+                  <strong>4 - </strong>Confirmação de Pagamento
+                </div>
+              </div><br/>
+              <div style="height: 10px;"></div>
+              <div id="lblmsg" style="text-align: center;">
+                Confirmação de Pagamento
+              </div><br/>
+              <div style="height: 10px;"></div>
+              <div class="dados">
+                <div class="row">
+                  <div class="col-40">
+                    <strong>Nome:</strong>
+                  </div>
+                  <div class="col-60" id="nomecartaopg" >
+                     
+                  </div>
+                </div>
+                <div style="height: 10px;"></div>
+                <div class="row">
+                  <div class="col-40">
+                    <strong id="tipodocpg"></strong>
+                  </div>
+                  <div class="col-60" id="numdocpg" >
+                    
+                  </div>
+                </div>
+                <div style="height: 10px;"></div>
+                <div class="row">
+                  <div class="col-40">
+                    <strong>Cartão Nro.:</strong>
+                  </div>
+                  <div class="col-60" id="numcartaopg" >
+                    
+                  </div>
+                </div>
+                <div style="height: 10px;"></div>
+                <div class="row">
+                  <div class="col-40">
+                    <strong>Val. Cartão:</strong>
+                  </div>
+                  <div class="col-60" id="valcartaopg" >
+                   
+                  </div>
+                </div>
+                <div style="height: 10px;"></div>
+                <div class="row">
+                  <div class="col-40">
+                    <strong>Cod. Seg.:</strong>
+                  </div>
+                  <div class="col-60" id="codsegpg" >
+                    
+                  </div>
+                </div>
+                <div style="height: 10px;"></div>
+                <div class="row">
+                  <div class="col-40">
+                    <strong>Total Pedido:</strong>
+                  </div>
+                  <div class="col-60" id="totalpg" >
+                    
+                  </div>
+                </div>
+                <div style="height: 10px;"></div>
+                <div class="row">
+                  <div class="col-40">
+                    <strong>Pagamento:</strong>
+                  </div>
+                  <div class="col-60" id="parcelaspg" >
+                    
+                  </div>
+                </div>
+              </div>
+              <div style="height: 10px;"></div>
+              <div class="btnfechar">
+                <button class="col button button-fill button-round color-red" id="btnfecha"
+                  style="text-align: center;" onclick="LoadPage('final');">
+                  <h4>Confirmar</h4>
+                </button>
+              </div>
+              <div style="height: 5px;"></div>
+              <div class="btnfechar">
+                <button class="col button button-fill button-round color-red" id="btnfecha"
+                  style="text-align: center;" onclick="LoadPage('pagamento');">
+                  <h4>Alterar</h4>
+                </button>
+              </div>                                
+            </div>
+          </div>
+      </div>
+  </div>
+
+  <!---------------------------------------------------------------------------------------------------------------------------------->
+  <script src="js/app/framework7.bundle.js"></script>
+  <script src="js/app/jquery.min.js"></script>
+  <script src="js/app/jquery.mask.min.js"></script>
+  <script src="js/app/md5.js"></script>
+  <script src="js/app/moment.js"></script>
+  <script src="js/app/moment.pt-br.js"></script>
+  <script src="js/page/app.js"></script>
+  <script src="js/page/servidor.js"></script>
+  <script src="js/page/funcoes.js"></script>
+  <script src="js/page/telas.js"></script>
+  
+
+</body>
+
+</html>

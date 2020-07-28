@@ -1,0 +1,23 @@
+{
+    "name": "br.com.agely.calcinha",
+    "displayName": "Cha",
+    "version": "1.0.0",
+    "description": "A sample Apache Cordova application that responds to the deviceready event.",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+        "ecosystem:cordova"
+    ],
+    "author": "Apache Cordova Team",
+    "license": "Apache-2.0",
+    "devDependencies": {
+        "gulp": "^4.0.2",
+        "gulp-sass": "^4.1.0"
+    },
+    "dependencies": {
+        "gulp-watch": "^5.0.1",
+        "percircle": "^1.0.29"
+    }
+}
