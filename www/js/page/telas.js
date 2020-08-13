@@ -7,7 +7,7 @@
  var notificacao = 0;
  var confirmados = 0;
  var comentalbum = 0;
-  var curtidasalbum = 0;
+ var curtidasalbum= 0;
  var curtidas = 0;
  var carrinho = [];
  var auxpessoal = [];
@@ -21,20 +21,23 @@
  var nomeNoiva = 'Marjorie Rafaela Alvarenga Pereira';
  var album = ["img/miniatura.jpg", "img/miniatura.jpg", "img/miniatura.jpg"];
  var dataEvento = '4/12/2020';
- var localEvento;
+ var rua = 'Maria Abadia A. Malagutti';
+ var numero = '240';
+ var bairro = 'Vila Formosa';
+ var cidade = 'São Sebastião do Paraíso';
+ var estadoE = 'MG';
  var msgBvindas = 'É com muito prazer que no dia 04 de Dezembro eu irei realizar meu primeiro' +
   'Chá de Lingerie, conto com a presença e a contribuição de todos vocês hein!!!';
  var localidade;
  var estado;
- var meta = 1000;
- var vlrMeta = 1000;
+ var meta = 500;
+ var vlrMeta = 200;
  
 window.onload = function(){
   carregaNoiva()
   carregaConvidado()
   carregaEvento()
   contanotificacao()
-  metaAtingida()
   var init = {
     versao: function() {
       
@@ -43,7 +46,7 @@ window.onload = function(){
       if(myApp["data"]["teste"]){
         myApp["data"]["versao"] = "data";
         //myApp["data"]["banco"] = "http://localhost:8080/NuclickServer"
-        myApp["data"]["banco"] = "https://sistemaagely.com.br:8345/ChaDeLingerie280420/";
+        //myApp["data"]["banco"] = "https://sistemaagely.com.br:8345/ChaDeLingerie280420/";
         myApp["data"]["banco"] = "https://sistemaagely.com.br:8345/ChaDeLingerie07072020/"
         typeof cordova !== "undefined" ? init.app() : init.web();
       } else { 

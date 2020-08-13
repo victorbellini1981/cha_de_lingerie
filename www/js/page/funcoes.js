@@ -543,20 +543,7 @@
   };
 
   function onClickcomentalbum() {
-          /* 
-            chamar função que envia dados do comentario para tabela comentarios no banco
-            
-            tabela comentarios = insert into (foto, nome, comentario, noiva)
-                                        values(fotocon, nomecon, comentario, nomenoiva)
-            chamar função que retorna comentarios para a noiva atual
-            var lista = $("#listcomentarios ul");
-            var lista1 = $("#listcomentarios1 ul");
-            var lista, lista1.empty();
-            for i in data
-            item-media = data[i].foto
-            item-title = data[i].nome
-            item-text = data[i].comentario
-          */
+          
           var comentario = document.getElementById("comentalbum").value;
           if (comentario == "") {
           Toast("Faça um comentário!")
@@ -569,6 +556,16 @@
             
               tabela comentarios = insert into (foto, nome, comentario, noiva)
                                           values(fotocon, nomecon, comentario, nomenoiva)
+              chamar função que insere um comentario a mais na tabela qtdcomentarios
+              tabela qtdcomentarios= insert into (comentar, noiva)
+                                            values('comentou', nomenoiva)
+              chamar função que retorna qtd de comentarios
+              qtdcomentarios(nomenoiva)
+
+              qtdcomentarios(data) abaixo
+              comentalbum = data.qtd
+              document.getElementById("comentarioalbum").innerHTML = comentalbum;
+
               chamar função que retorna comentarios para a noiva atual
               listas.listaComentarios(nomeNoiva)
             */            
@@ -1188,15 +1185,7 @@
   
     $('#tamanhos').find(el).addClass("active");
   }
-  function totalCompra(){
-        var valor = 0;
-        for (var i in carrinho) {
-          valor = valor + carrinho[i]["total"]
-        }
-        $("#vlrtotal").html(Util.formataDuasCasas((valor)));
-        LoadPage('confirmacaopgto')  
-  }
-
+  
   function is_cpf (c) {
 
     if((c = c.replace(/[^\d]/g,"")).length != 11)
@@ -1518,10 +1507,9 @@
     $("#valcartaopg").html(carrinhoFinal.infoCredito[0]["mes"] + "/" + carrinhoFinal.infoCredito[0]["ano"]);
     $("#codsegpg").html(carrinhoFinal.infoCredito[0]["codseg"]);
     var valor = 0;
-    for (var i in carrinho) {
-      valor = valor + carrinho[i]["total"]
+    for (var itens in carrinho) {
+      valor = valor + carrinho[itens]["total"]
     }
-    vlrMeta = valor;
     $("#totalpg").html("R$ " + Util.formataDuasCasas(valor));
     if (carrinhoFinal.infoCredito[0]["parcelas"] == 1){
       $("#parcelaspg").html("À vista")
@@ -1529,6 +1517,15 @@
     $("#parcelaspg").html(carrinhoFinal.infoCredito[0]["parcelas"] + " x de: " + Util.formataDuasCasas(valor / carrinhoFinal.infoCredito[0]["parcelas"]));
     }
     totalCompra()  
+  }
+
+  function totalCompra(){
+    var valor = 0;
+    for (var i in carrinho) {
+      valor = valor + carrinho[i]["total"]
+    }
+    $("#vlrtotal").html(Util.formataDuasCasas((valor)));
+    LoadPage('confirmacaopgto')  
   }
   // função para contar caracteres da mensagem escrita na pagina minhas informações
   $(document).on("input", "#mensg", function() {
@@ -1586,6 +1583,11 @@
     $(".page1 li #dataevento b").html(dataEvento);
     $(".page2 li #dataevento1 b").html(dataEvento);
     $(".page2 #mensagem").html(msgBvindas);
+    $(".page4 #rua").html(rua);
+    $(".page4 #numero").html(numero);
+    $(".page4 #bairro").html(bairro);
+    $(".page4 #cidade").html(cidade);
+    $(".page4 #estado").html(estadoE);
   }
   function carregaConvidado(){
     $(" #page3 .no-hairlines-md li .item-media img").attr('src', fotoCon);
