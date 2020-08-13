@@ -489,16 +489,6 @@
    }
 
       
-  function onClickcurtirpagina() {
-            curtidas += 1;
-            document.getElementById("curtidas").innerHTML = curtidas;
-            var display = document.getElementById("curtirpagina1").style.display;
-            if (display == 'none') {
-              document.getElementById("curtirpagina1").style.display = 'block';
-              document.getElementById("curtirpagina").style.display = 'none'
-            }
-  };
-
   function onClickcurtiralbum() {
             curtidasalbum += 1;
             document.getElementById("curtidasalbum").innerHTML = curtidasalbum;
@@ -542,68 +532,6 @@
               +'  </li>')};
   };
 
-  function onClickcomentalbum() {
-          
-          var comentario = document.getElementById("comentalbum").value;
-          if (comentario == "") {
-          Toast("Faça um comentário!")
-          } else {
-            comentalbum += 1;
-            document.getElementById("comentarioalbum").innerHTML = comentalbum;
-            document.getElementById("comentalbum").value = "";
-            /* 
-              chamar função que envia dados do comentario para tabela comentarios no banco
-            
-              tabela comentarios = insert into (foto, nome, comentario, noiva)
-                                          values(fotocon, nomecon, comentario, nomenoiva)
-              chamar função que insere um comentario a mais na tabela qtdcomentarios
-              tabela qtdcomentarios= insert into (comentar, noiva)
-                                            values('comentou', nomenoiva)
-              chamar função que retorna qtd de comentarios
-              qtdcomentarios(nomenoiva)
-
-              qtdcomentarios(data) abaixo
-              comentalbum = data.qtd
-              document.getElementById("comentarioalbum").innerHTML = comentalbum;
-
-              chamar função que retorna comentarios para a noiva atual
-              listas.listaComentarios(nomeNoiva)
-            */            
-            // função listaComentarios(data) abaixo
-            var lista = $("#listcomentarios ul");
-            var listaA = $("#listcomentarios1 ul");
-            //lista.empty(), listaA.empty();
-            /* 
-            for i in data
-            <div class="item-media" id="fotoconvidcoment"><img src=' + data[i].foto + ' width="44" /></div>'
-            <div class="item-title" id="nomeconvidcoment">' + data[i].nome + '</div>'
-            <div class="item-text" id="txtconvidcoment">' + data[i].comentario + '</div>'
-            */
-            
-              lista.append('<li>'
-            +'    <div class="item-content">'
-            +'      <div class="item-media" id="fotoconvidcoment"><img src=' + fotoCon + ' width="44" /></div>'
-            +'      <div class="item-inner">'
-            +'        <div class="item-title-row">'
-            +'          <div class="item-title" id="nomeconvidcoment">' + nomeCon + '</div>'
-            +'        </div>'
-            +'        <div class="item-text" id="txtconvidcoment">' + comentario + '</div>'
-            +'      </div>'
-            +'    </div>'
-            +'  </li>');
-              listaA.append('<li>'
-            +'    <div class="item-content">'
-            +'      <div class="item-media" id="fotoconvidcoment"><img src=' + fotoCon + ' width="44" /></div>'
-            +'      <div class="item-inner">'
-            +'        <div class="item-title-row">'
-            +'          <div class="item-title" id="nomeconvidcoment">' + nomeCon + '</div>'
-            +'        </div>'
-            +'        <div class="item-text" id="txtconvidcoment">' + comentario + '</div>'
-            +'      </div>'
-            +'    </div>'
-            +'  </li>')}
-  };
-
   function onClickconfirmar() {
           confirmados += 1;
           document.getElementById("confirmados").innerHTML = ("CONFIRMADOS" + " " + "(" + confirmados + ")");
@@ -625,10 +553,6 @@
                 document.getElementById('ecran').scrollLeft=document.getElementById('ecran').scrollLeft+1
                 }
 
-                if(document.getElementById('listcomentarios').scrollTop<(document.getElementById('listcomentarios').scrollHeight-document.getElementById('listcomentarios').offsetHeight)){-1
-                  document.getElementById('listcomentarios').scrollTop=document.getElementById('listcomentarios').scrollTop+1
-                  }
-                                
                   if(document.getElementById('listrecados').scrollTop<(document.getElementById('listrecados').scrollHeight-document.getElementById('listrecados').offsetHeight)){-1
                     document.getElementById('listrecados').scrollTop=document.getElementById('listrecados').scrollTop+1
                     }

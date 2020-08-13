@@ -511,6 +511,45 @@
       }
     }
   }
+  #page3{
+    .listapresentes{
+      color: white;
+      background-color: red;
+      width: 100%;
+      position: absolute;
+      margin-top: 1110px;
+      
+  
+      .dagua{
+        opacity: 0.1;
+        margin-top: -35px;
+        width: 140px;
+        height: 160px;
+      }
+      #listpres{
+        position: absolute; top: 15px;
+      }
+      #txtajudar{
+        position: absolute; top: 40px;
+      }
+      .botao{
+        position: absolute; top: 80px;
+      }
+      
+      .row{
+        margin-left: 10%;
+      }
+  
+      .botao{
+        width: 50%;
+        margin-left: 40%;
+  
+        h4{
+          color: black;
+        }
+      }
+    }  
+  }
 }
 #page3{
   .album{
@@ -552,7 +591,7 @@
       background: #333;
       padding: 2px;
     }
-      @media (min-width: 480px) {
+    @media (min-width: 480px) {
           .gallery-container {
             width: 800px;
             margin: auto;
@@ -714,7 +753,7 @@
     background-color: red;
     width: 100%;
     position: absolute;
-    margin-top: 1410px;
+    margin-top: 1110px;
     
 
     .dagua{
@@ -752,7 +791,7 @@
     background-color: grayscale($color: #ddd8d3);
     width: 100%;
     position: absolute;
-    margin-top: 1540px;
+    margin-top: 1240px;
 
     .local{
       margin: 0 auto;
@@ -764,7 +803,7 @@
 
   .mapa{
     position: absolute;
-    margin-top: 1630px;
+    margin-top: 1330px;
     width: 100%;
     
     .rotas{
@@ -781,11 +820,11 @@
   .muralderecados{
     width: 100%;
     position: absolute;
-    margin-top: 1920px;
+    margin-top: 1630px;
   }
   .media-list{
     height: 170px;
-    position: absolute; margin-top: 1980px;
+    position: absolute; margin-top: 1690px;
     left: 5%;
     margin-bottom: 10px;
     
@@ -797,13 +836,13 @@
   }
 
   .recados{
-    position: absolute; margin-top: 2180px;
+    position: absolute; margin-top: 1870px;
     left: 10%;
     color: black;
   } 
 
   .no-hairlines-md{
-    margin-top: 2210px; left: 5%;
+    margin-top: 1900px; left: 5%;
     position: absolute;
     width: 90%;
     li{
@@ -1181,7 +1220,7 @@
         background-color: red;
         width: 100%;
         position: absolute;
-        margin-top: 1250px;
+        margin-top: 980px;
 
         .dagua{
           opacity: 0.2;
@@ -1210,7 +1249,7 @@
         background-color: grayscale($color: #ddd8d3);
         width: 100%;
         position: absolute;
-        margin-top: 1370px;
+        margin-top: 1140px;
 
         .local{
           margin: 0 auto;
@@ -1222,7 +1261,7 @@
     
       .mapa{
         position: absolute;
-        margin-top: 1460px;
+        margin-top: 1230px;
         width: 100%;
         
         .rotas{
@@ -1239,12 +1278,12 @@
       .muralderecados{
         width: 100%;
         position: absolute;
-        margin-top: 1755px;
+        margin-top: 1520px;
       }
       .media-list{
         width: 100%;
         height: 170px;
-        position: absolute; margin-top: 1810px;
+        position: absolute; margin-top: 1580px;
         margin-bottom: 10px;
         
         .item-media{
@@ -1255,13 +1294,13 @@
       }
     
       .recados{
-        position: absolute; margin-top: 1980px;
+        position: absolute; margin-top: 1760px;
         left: 10%;
         color: black;
       } 
     
       .no-hairlines-md{
-        margin-top: 2005px; left: 5%;
+        margin-top: 1790px; left: 5%;
         position: absolute;
         width: 90%;
         li{
@@ -1659,7 +1698,7 @@
       background-color: red;
       width: 80%;
       position: absolute;
-      margin-top: 1985px;
+      margin-top: 1565px;
       margin-left: 10%;
 
       .dagua{
@@ -1688,7 +1727,7 @@
         background-color: red;
         width: 80%;
         position: absolute;
-        margin-top: 2035px;
+        margin-top: 1630px;
         margin-left: 10%;
 
         .dagua{
@@ -1716,10 +1755,10 @@
       .listapresentes{
         color: white;
         background-color: red;
-        width: 60%;
+        width: 64%;
         position: absolute;
-        margin-top: 1915px;
-        margin-left: 20%;
+        margin-top: 1555px;
+        margin-left: 18%;
 
         .dagua{
           opacity: 0.2;
@@ -1748,7 +1787,7 @@
       background-color: grayscale($color: #ddd8d3);
       width: 80%;
       position: absolute;
-      margin-top: 2120px;
+      margin-top: 1700px;
       margin-left: 10%;
   
       .local{
@@ -1761,7 +1800,7 @@
   
     .mapa{
       position: absolute;
-      margin-top: 2210px;
+      margin-top: 1790px;
       margin-left: 10%;
       width: 80%;
       
@@ -1779,10 +1818,10 @@
     .muralderecados{
       width: 100%;
       position: absolute;
-      margin-top: 2510px;
+      margin-top: 2090px;
     }
     .media-list{
-      margin-top: 2560px;
+      margin-top: 2140px;
       width: 80%;
       height: 35%;
       position: absolute; 
@@ -1796,13 +1835,13 @@
     }
   
     .recados{
-      position: absolute; margin-top: 2865px;
+      position: absolute; margin-top: 2445px;
       left: 10%;
       color: black;
     } 
   
     .no-hairlines-md{
-      margin-top: 2900px; left: 10%;
+      margin-top: 2480px; left: 10%;
       position: absolute;
       width: 80%;
       li{
@@ -1831,7 +1870,7 @@
         background-color: grayscale($color: #ddd8d3);
         width: 80%;
         position: absolute;
-        margin-top: 2170px;
+        margin-top: 1810px;
         margin-left: 10%;
     
         .local{
@@ -1844,7 +1883,7 @@
     
       .mapa{
         position: absolute;
-        margin-top: 2260px;
+        margin-top: 1910px;
         margin-left: 10%;
         width: 80%;
         
@@ -1862,10 +1901,10 @@
       .muralderecados{
         width: 100%;
         position: absolute;
-        margin-top: 2560px;
+        margin-top: 2200px;
       }
       .media-list{
-        margin-top: 2610px;
+        margin-top: 2270px;
         width: 80%;
         height: 27%;
         position: absolute; 
@@ -1879,13 +1918,13 @@
       }
     
       .recados{
-        position: absolute; margin-top: 2905px;
+        position: absolute; margin-top: 2580px;
         left: 10%;
         color: black;
       } 
     
       .no-hairlines-md{
-        margin-top: 2940px; left: 10%;
+        margin-top: 2610px; left: 10%;
         position: absolute;
         width: 80%;
         li{
@@ -1928,7 +1967,7 @@
     }
     #page4{
       .media-list{
-        margin-top: 2610px;
+        margin-top: 2170px;
         width: 80%;
         height: 17%;
         position: absolute; 
@@ -2071,10 +2110,10 @@
   #page4{
     .localdoevento{
       background-color: grayscale($color: #ddd8d3);
-      width: 60%;
+      width: 64%;
       position: absolute;
-      margin-top: 2050px;
-      margin-left: 20%;
+      margin-top: 1710px;
+      margin-left: 18%;
   
       .local{
         margin: 0 auto;
@@ -2086,9 +2125,9 @@
   
     .mapa{
       position: absolute;
-      margin-top: 2140px;
-      margin-left: 20%;
-      width: 60%;
+      margin-top: 1795px;
+      margin-left: 18%;
+      width: 64%;
       
       .rotas{
         position: absolute; bottom: 25%;
@@ -2104,10 +2143,10 @@
     .muralderecados{
       width: 100%;
       position: absolute;
-      margin-top: 2440px;
+      margin-top: 2100px;
     }
     .media-list{
-      margin-top: 2490px;
+      margin-top: 2150px;
       width: 60%;
       height: 35%;
       position: absolute; 
@@ -2121,13 +2160,13 @@
     }
   
     .recados{
-      position: absolute; margin-top: 2715px;
+      position: absolute; margin-top: 2460px;
       left: 22%;
       color: black;
     } 
   
     .no-hairlines-md{
-      margin-top: 2740px; left: 20%;
+      margin-top: 2490px; left: 20%;
       position: absolute;
       width: 60%;
       li{

@@ -364,7 +364,34 @@
     position: absolute;
     top: 27px;
     left: 755px;
-    color: black; } }
+    color: black; }
+  #page3 .listapresentes {
+    color: white;
+    background-color: red;
+    width: 100%;
+    position: absolute;
+    margin-top: 1110px; }
+    #page3 .listapresentes .dagua {
+      opacity: 0.1;
+      margin-top: -35px;
+      width: 140px;
+      height: 160px; }
+    #page3 .listapresentes #listpres {
+      position: absolute;
+      top: 15px; }
+    #page3 .listapresentes #txtajudar {
+      position: absolute;
+      top: 40px; }
+    #page3 .listapresentes .botao {
+      position: absolute;
+      top: 80px; }
+    #page3 .listapresentes .row {
+      margin-left: 10%; }
+    #page3 .listapresentes .botao {
+      width: 50%;
+      margin-left: 40%; }
+      #page3 .listapresentes .botao h4 {
+        color: black; } }
 
 #page3 .album {
   width: 100%;
@@ -517,7 +544,7 @@
   background-color: red;
   width: 100%;
   position: absolute;
-  margin-top: 1410px; }
+  margin-top: 1110px; }
   #page3 .listapresentes .dagua {
     opacity: 0.1;
     margin-top: -35px;
@@ -544,7 +571,7 @@
   background-color: #d8d8d8;
   width: 100%;
   position: absolute;
-  margin-top: 1540px; }
+  margin-top: 1240px; }
   #page4 .localdoevento .local {
     margin: 0 auto; }
   #page4 .localdoevento .local1 {
@@ -552,7 +579,7 @@
 
 #page4 .mapa {
   position: absolute;
-  margin-top: 1630px;
+  margin-top: 1330px;
   width: 100%; }
   #page4 .mapa .rotas {
     position: absolute;
@@ -566,12 +593,12 @@
 #page4 .muralderecados {
   width: 100%;
   position: absolute;
-  margin-top: 1920px; }
+  margin-top: 1630px; }
 
 #page4 .media-list {
   height: 170px;
   position: absolute;
-  margin-top: 1980px;
+  margin-top: 1690px;
   left: 5%;
   margin-bottom: 10px; }
   #page4 .media-list .item-media img {
@@ -579,12 +606,12 @@
 
 #page4 .recados {
   position: absolute;
-  margin-top: 2180px;
+  margin-top: 1870px;
   left: 10%;
   color: black; }
 
 #page4 .no-hairlines-md {
-  margin-top: 2210px;
+  margin-top: 1900px;
   left: 5%;
   position: absolute;
   width: 90%; }
@@ -852,7 +879,7 @@
     background-color: red;
     width: 100%;
     position: absolute;
-    margin-top: 1250px; }
+    margin-top: 980px; }
     #page3 .listapresentes .dagua {
       opacity: 0.2;
       margin-top: -35px;
@@ -869,14 +896,14 @@
     background-color: #d8d8d8;
     width: 100%;
     position: absolute;
-    margin-top: 1370px; }
+    margin-top: 1140px; }
     #page4 .localdoevento .local {
       margin: 0 auto; }
     #page4 .localdoevento .local1 {
       margin: 0 auto; }
   #page4 .mapa {
     position: absolute;
-    margin-top: 1460px;
+    margin-top: 1230px;
     width: 100%; }
     #page4 .mapa .rotas {
       position: absolute;
@@ -889,22 +916,22 @@
   #page4 .muralderecados {
     width: 100%;
     position: absolute;
-    margin-top: 1755px; }
+    margin-top: 1520px; }
   #page4 .media-list {
     width: 100%;
     height: 170px;
     position: absolute;
-    margin-top: 1810px;
+    margin-top: 1580px;
     margin-bottom: 10px; }
     #page4 .media-list .item-media img {
       border-radius: 100% !important; }
   #page4 .recados {
     position: absolute;
-    margin-top: 1980px;
+    margin-top: 1760px;
     left: 10%;
     color: black; }
   #page4 .no-hairlines-md {
-    margin-top: 2005px;
+    margin-top: 1790px;
     left: 5%;
     position: absolute;
     width: 90%; }
@@ -1194,7 +1221,7 @@
     background-color: red;
     width: 80%;
     position: absolute;
-    margin-top: 1985px;
+    margin-top: 1565px;
     margin-left: 10%; }
     #page3 .listapresentes .dagua {
       opacity: 0.4;
@@ -1215,7 +1242,7 @@
     background-color: red;
     width: 80%;
     position: absolute;
-    margin-top: 2035px;
+    margin-top: 1630px;
     margin-left: 10%; }
     #page3 .listapresentes .dagua {
       opacity: 0.2;
@@ -1234,10 +1261,10 @@
   #page3 .listapresentes {
     color: white;
     background-color: red;
-    width: 60%;
+    width: 64%;
     position: absolute;
-    margin-top: 1915px;
-    margin-left: 20%; }
+    margin-top: 1555px;
+    margin-left: 18%; }
     #page3 .listapresentes .dagua {
       opacity: 0.2;
       margin-top: -35px;
@@ -1256,7 +1283,7 @@
     background-color: #d8d8d8;
     width: 80%;
     position: absolute;
-    margin-top: 2120px;
+    margin-top: 1700px;
     margin-left: 10%; }
     #page4 .localdoevento .local {
       margin: 0 auto; }
@@ -1264,7 +1291,7 @@
       margin: 0 auto; }
   #page4 .mapa {
     position: absolute;
-    margin-top: 2210px;
+    margin-top: 1790px;
     margin-left: 10%;
     width: 80%; }
     #page4 .mapa .rotas {
@@ -1278,9 +1305,9 @@
   #page4 .muralderecados {
     width: 100%;
     position: absolute;
-    margin-top: 2510px; }
+    margin-top: 2090px; }
   #page4 .media-list {
-    margin-top: 2560px;
+    margin-top: 2140px;
     width: 80%;
     height: 35%;
     position: absolute;
@@ -1289,11 +1316,11 @@
       border-radius: 100% !important; }
   #page4 .recados {
     position: absolute;
-    margin-top: 2865px;
+    margin-top: 2445px;
     left: 10%;
     color: black; }
   #page4 .no-hairlines-md {
-    margin-top: 2900px;
+    margin-top: 2480px;
     left: 10%;
     position: absolute;
     width: 80%; }
@@ -1314,7 +1341,7 @@
     background-color: #d8d8d8;
     width: 80%;
     position: absolute;
-    margin-top: 2170px;
+    margin-top: 1810px;
     margin-left: 10%; }
     #page4 .localdoevento .local {
       margin: 0 auto; }
@@ -1322,7 +1349,7 @@
       margin: 0 auto; }
   #page4 .mapa {
     position: absolute;
-    margin-top: 2260px;
+    margin-top: 1910px;
     margin-left: 10%;
     width: 80%; }
     #page4 .mapa .rotas {
@@ -1336,9 +1363,9 @@
   #page4 .muralderecados {
     width: 100%;
     position: absolute;
-    margin-top: 2560px; }
+    margin-top: 2200px; }
   #page4 .media-list {
-    margin-top: 2610px;
+    margin-top: 2270px;
     width: 80%;
     height: 27%;
     position: absolute;
@@ -1347,11 +1374,11 @@
       border-radius: 100% !important; }
   #page4 .recados {
     position: absolute;
-    margin-top: 2905px;
+    margin-top: 2580px;
     left: 10%;
     color: black; }
   #page4 .no-hairlines-md {
-    margin-top: 2940px;
+    margin-top: 2610px;
     left: 10%;
     position: absolute;
     width: 80%; }
@@ -1377,7 +1404,7 @@
     #page3 .media-list .item-media img {
       border-radius: 100% !important; }
   #page4 .media-list {
-    margin-top: 2610px;
+    margin-top: 2170px;
     width: 80%;
     height: 17%;
     position: absolute;
@@ -1463,19 +1490,19 @@
       border-radius: 100% !important; }
   #page4 .localdoevento {
     background-color: #d8d8d8;
-    width: 60%;
+    width: 64%;
     position: absolute;
-    margin-top: 2050px;
-    margin-left: 20%; }
+    margin-top: 1710px;
+    margin-left: 18%; }
     #page4 .localdoevento .local {
       margin: 0 auto; }
     #page4 .localdoevento .local1 {
       margin: 0 auto; }
   #page4 .mapa {
     position: absolute;
-    margin-top: 2140px;
-    margin-left: 20%;
-    width: 60%; }
+    margin-top: 1795px;
+    margin-left: 18%;
+    width: 64%; }
     #page4 .mapa .rotas {
       position: absolute;
       bottom: 25%;
@@ -1487,9 +1514,9 @@
   #page4 .muralderecados {
     width: 100%;
     position: absolute;
-    margin-top: 2440px; }
+    margin-top: 2100px; }
   #page4 .media-list {
-    margin-top: 2490px;
+    margin-top: 2150px;
     width: 60%;
     height: 35%;
     position: absolute;
@@ -1498,11 +1525,11 @@
       border-radius: 100% !important; }
   #page4 .recados {
     position: absolute;
-    margin-top: 2715px;
+    margin-top: 2460px;
     left: 22%;
     color: black; }
   #page4 .no-hairlines-md {
-    margin-top: 2740px;
+    margin-top: 2490px;
     left: 20%;
     position: absolute;
     width: 60%; }

@@ -4,11 +4,9 @@
  var Formulario = new Formulario();
  var Util = new Util();
  var Listas = new Listas();
- var notificacao = 0;
  var confirmados = 0;
  var comentalbum = 0;
  var curtidasalbum= 0;
- var curtidas = 0;
  var carrinho = [];
  var auxpessoal = [];
  var infoPessoais = [];
