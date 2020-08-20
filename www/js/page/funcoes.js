@@ -488,7 +488,7 @@
     localStorage[myApp["id"]] = JSON.stringify(myApp["data"]);
    }
 
-      
+//função para somar uma curtida ao álbum  
   function onClickcurtiralbum() {
             curtidasalbum += 1;
             document.getElementById("curtidasalbum").innerHTML = curtidasalbum;
@@ -498,8 +498,11 @@
               document.getElementById("curtiralbum").style.display = 'none'
             }
   };
-        
+//função para somar um comentário ao álbum  e adicionar comentario na lista de comentários
+// no banco        
   function onClickrecadoalbum() {
+            comentalbum += 1;
+            document.getElementById("comentarioalbum").innerHTML = comentalbum;
           var recado = document.getElementById("recadoalbum").value;
           if (recado == "") {
           Toast("Faça um comentário!")
@@ -531,7 +534,7 @@
               +'    </div>'
               +'  </li>')};
   };
-
+// função para confirmar presença e adicionar foto do convidado na lista de convidados confirmados
   function onClickconfirmar() {
           confirmados += 1;
           document.getElementById("confirmados").innerHTML = ("CONFIRMADOS" + " " + "(" + confirmados + ")");
@@ -546,7 +549,7 @@
           '  <img src=' + fotoCon + ' class="miniatura" />' 
             );
   };
-
+// função que rola automaticamente os comentarios e os confirmados para que o ultimo sempre apareça
   function ScrollDiv(){
 
           if(document.getElementById('ecran').scrollLeft<(document.getElementById('ecran').scrollWidth-document.getElementById('ecran').offsetWidth)){-1
@@ -557,9 +560,9 @@
                     document.getElementById('listrecados').scrollTop=document.getElementById('listrecados').scrollTop+1
                     }
   }
-
   setInterval(ScrollDiv,0)
-
+// função que retorna a lista de todos os convidados que confirmaram presença 
+// e não só os últimos confirmados
   function onClickConfirmados() {
             var display = document.getElementById("ecran1").style.display;
             if (display == 'none') {
@@ -570,29 +573,9 @@
               document.getElementById("ecran").style.display = 'block'
             }
             
-          };
-          function onClickcomentarios() {
-            var display = document.getElementById("listcomentarios1").style.display;
-            if (display == 'none') {
-              document.getElementById("listcomentarios1").style.display = 'block';
-              document.getElementById("listcomentarios").style.display = 'none'
-            } else {
-              document.getElementById("listcomentarios1").style.display = 'none';
-              document.getElementById("listcomentarios").style.display = 'block'
-            }
-          };
-          function onClickcomentslingerie() {
-            var display = document.getElementById("listcomentslingerie1").style.display;
-            if (display == 'none') {
-              document.getElementById("listcomentslingerie1").style.display = 'block';
-              document.getElementById("listcomentslingerie").style.display = 'none'
-            }
-            else {
-              document.getElementById("listcomentslingerie1").style.display = 'none';
-              document.getElementById("listcomentslingerie").style.display = 'block';
-            }
-          };
-          function onClickrecados() {
+  };
+// função que retorna a lista de todos os recados e não só os últimos.
+function onClickrecados() {
             var display = document.getElementById("listrecados1").style.display;
             if (display == 'none') {
               document.getElementById("listrecados1").style.display = 'block';
@@ -601,17 +584,9 @@
               document.getElementById("listrecados1").style.display = 'none';
               document.getElementById("listrecados").style.display = 'block'
             }
-          };
-          function onClickcurtirminlingerie() {
-            curtidasminlingerie += 1;
-            document.getElementById("curtidasminlingerie").innerHTML = curtidasminlingerie;
-            var display = document.getElementById("curtirminlingerie1").style.display;
-            if (display == 'none') {
-              document.getElementById("curtirminlingerie1").style.display = 'block';
-              document.getElementById("curtirminlingerie").style.display = 'none'
-            }
-          };
-          function AbreFiltro() {
+};
+// função para abrir o filtro pro convidado filtar suas buscas
+function AbreFiltro() {
             var display = document.getElementById("filtro").style.display;
             if (display == 'none') {
               document.getElementById("filtro").style.display = 'block';
@@ -623,8 +598,9 @@
             $("#rangemax").html("1000")
             $("#min").val(0)
             $("#max").val(1000)
-          };
-          function AbreCarrinho() {
+};
+// função para abrir o carrinho de compras
+function AbreCarrinho() {
             var display = document.getElementById("carrinho").style.display;
             if (display == 'none') {
               document.getElementById("carrinho").style.display = 'block';
@@ -632,8 +608,9 @@
             else {
               document.getElementById("carrinho").style.display = 'none';
             }
-          };
-          function addSeparator(nStr) {
+};
+
+function addSeparator(nStr) {
             nStr += '';
             var x = nStr.split('.');
             var x1 = x[0];
@@ -643,8 +620,8 @@
                 x1 = x1.replace(rgx, '$1' + '.' + '$2');
             }
             return x1 + x2;
-  };
-
+};
+//função para escolher o minimo e o máximo do valor dos produto que deseja comprar
   function MinMax(){
           $("#objprecosmin").val(0)
           $("#objprecosmax").val(1000)
@@ -655,7 +632,7 @@
           
           
   };
-
+// função que faz retornar o mínimo pro 0 e o máximo pra 1000
   function rangeInputChangeEventHandler(e){
           var rangeGroup = $(this).attr('name'),
               minBtn = $(this).parent().children('.min'),
@@ -683,7 +660,7 @@
           $("#objprecosmax").val(maxVal)
           
   };
-
+// carrega a lista com os produtos que estão na faixa de preço selecionada
   function Aplicar(){
           var minimo = parseInt($("#objprecosmin").val());
           var maximo = parseInt($("#objprecosmax").val());
@@ -740,13 +717,13 @@
         
   $('input[type="range"]').on( 'input', rangeInputChangeEventHandler);
 
-  function contanotificacao(){
+  /*function contanotificacao(){
           notificacao += 1;
           $("#btnnotif .descricao" ).html(notificacao)
           setTimeout(function() {
             contanotificacao()
           }, 30000);
-  }
+  }*/
 
   function listaEstados(data){
     var lista = $("#ufs ");
@@ -875,7 +852,7 @@
     $("#valorGeral").append("R$" + Util.formataDuasCasas((totalprod)))
     LoadPage('presenteselect')
   }
-
+// ordena a lista de produtos do menor pro maior preço
   function menorPreco(){
     var menorpreco = JSON.parse($("#objmenor").val().replace(/\'/g, '\"'));
     for (var i in menorpreco){
@@ -922,12 +899,13 @@
       +'</li>');
     }
   }
-
+// tras o valor total do carrinho de compras
   function multiplicaValor(){
     var total = totalprod * parseInt($("#objqtd").val())
     $("#valorGeral").empty()
     $("#valorGeral").append("R$" + Util.formataDuasCasas((total)))
   }
+// retorna lista de parcelas pro cliente escolher qtde de parcelas que vai pagar
   function valorCarrinho() {
     var valor = 0;
     var qtd = 0;
@@ -953,7 +931,7 @@
         +'  <option value="9">9x de '+ "R$" + " " + Util.formataDuasCasas(valor/9) +'</option>'
         +'  <option value="10">10x de '+ "R$" + " " + Util.formataDuasCasas(valor/10) +'</option>');
   }
-
+// adiciona produto no carrinho
   function adicionaCarrinho() {
     var tamanho;
     var auxcarrinho;
