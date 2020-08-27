@@ -32,10 +32,7 @@
  var vlrMeta = 200;
  
 window.onload = function(){
-  carregaNoiva()
-  carregaConvidado()
-  carregaEvento()
-  contanotificacao()
+  
   var init = {
     versao: function() {
       
@@ -45,7 +42,7 @@ window.onload = function(){
         myApp["data"]["versao"] = "data";
         //myApp["data"]["banco"] = "http://localhost:8080/NuclickServer"
         //myApp["data"]["banco"] = "https://sistemaagely.com.br:8345/ChaDeLingerie280420/";
-        myApp["data"]["banco"] = "https://sistemaagely.com.br:8345/ChaDeLingerie07072020/"
+        myApp["data"]["banco"] = "https://sistemaagely.com.br:8345/ChaDeLingerie27082020/"
         typeof cordova !== "undefined" ? init.app() : init.web();
       } else { 
         jQuery.ajax({
@@ -82,6 +79,12 @@ window.onload = function(){
     },
     boas_vindas: function(){
       LoadPage("home", { animate: false })
+      carregaNoiva()
+      carregaConvidado()
+      carregaEvento()
+
+      console.log(myApp.data.banco)
+
       salvaLocalStorage();
     },
     

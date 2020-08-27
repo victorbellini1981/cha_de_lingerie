@@ -768,10 +768,13 @@ function addSeparator(nStr) {
     lista.empty();//limpa a lista
     for (var i in data) {
     var imagem;
-      if(data [i]["link"] == undefined){
+    var arraylink = data[i].link.replace("{", "")
+    arraylink = arraylink.replace("}", "")
+    arraylink = arraylink.split(",")
+      if(data [i]["link"] == '{NULL}'){
         imagem = '<img class="minlingerie" src="img/sem_foto.png" alt="" onclick="Listas.detalhaProduto('+ data[i]["referencia"]+')">'
         }else{
-          imagem = '<img class="minlingerie" src="https://sistemaagely.com.br:8345/'+ data[i]["link"]+'" alt="" onclick="Listas.detalhaProduto('+ data[i]["referencia"]+')">'
+          imagem = '<img class="minlingerie" src="https://sistemaagely.com.br:8345/'+ arraylink[0]+'" alt="" onclick="Listas.detalhaProduto('+ data[i]["referencia"]+')">'
         }
       lista.append('<li class="col-50">'
       +'  <div class="container">'
