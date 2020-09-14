@@ -679,10 +679,13 @@ function addSeparator(nStr) {
           }
           for (var i in precos){
             var imagem;
-            if(precos [i]["link"] == undefined){
+            var arraylink = precos[i].link.replace("{", "")
+            arraylink = arraylink.replace("}", "")
+            arraylink = arraylink.split(",")
+            if(precos[i]["link"] == '{NULL}'){
               imagem = '<img class="minlingerie" src="img/sem_foto.png" alt="" onclick="Listas.detalhaProduto('+ precos[i]["referencia"]+')">'
               }else{
-                imagem = '<img class="minlingerie" src="https://sistemaagely.com.br:8345/'+ precos[i]["link"]+'" alt="" onclick="Listas.detalhaProduto('+ precos[i]["referencia"]+')">'
+                imagem = '<img class="minlingerie" src="https://sistemaagely.com.br:8345/'+ arraylink[0]+'" alt="" onclick="Listas.detalhaProduto('+ precos[i]["referencia"]+')">'
               }
             if(precos[i]["preco_tabela"] >= minimo && precos[i]["preco_tabela"] <= maximo){
               lista.append('<li class="col-50">'
@@ -738,7 +741,7 @@ function addSeparator(nStr) {
         listab.append('<option value="'+ data[i][j]["cidade"] +'">'+ data[i][j]["cidade"] +'</option>');   
       }
     }
-    LoadPage('minhasinformacoes')
+    LoadPage('minhasinformacoes');
   }
 
   function listaCidades(data){
@@ -782,13 +785,13 @@ function addSeparator(nStr) {
       +'        <div class="minlingeries" style="text-align: center;">'
       +                 imagem  
       // +'            <img class="minlingerie" src="https://sistemaagely.com.br:8345/'+ data[i]["link"]+'" alt="" onclick="Listas.detalhaProduto('+ data[i]["referencia"]+')"><br />'
-      +'            <div class="row" id="nomelingerie">'
+      +'            <div class="row" id="nomelingerie" style="text-align: center;">'
       +'                <h6>'+ data[i]["descricao"]+'</h6>'
       +'            </div>'
     // +'            <div class="row" id="cotas">'
     // +'                <h6 style="color: rgb(170, 166, 166);">10 cotas de:</h6>'
     // +'            </div>'
-      +'            <div class="row" id="preco">'
+      +'            <div class="row" id="preco" style="text-align: center;">'
       +'                <h6 class="valor" id="valor">R$'+ " " +Util.formataDuasCasas((data[i]["preco_tabela"])) +'</h6>'
       +'            </div>'
       +'            <div class="btnpresentear"><button class="col button button-fill button-round color-red" id="botao"'
@@ -812,10 +815,25 @@ function addSeparator(nStr) {
     var arraytam = data.tamanhos.replace("{", "")
     arraytam = arraytam.replace("}", "")
     arraytam = arraytam.split(",")
+    var arraycomptam = [];
+    arraycomptam.push(arraytam[0]);
+    var comp;
+    for (var k in arraytam) {
+      comp = false;
+      for (var j in arraycomptam) {
+        if (arraytam[k] == arraycomptam[j]) {
+          comp = true;
+          break;
+        }
+      }
+      if (comp == false) {
+        arraycomptam.push(arraytam[k]);
+      }
+    }
     // adiciona os tamanhos disponiveis de cada produto
-    for (var i in arraytam) {
-      $("#tamanhos").append('<div class="col-25 tamanho" id="tamanho_' + arraytam[i] + '" onclick="seltamanho(this)">'
-        + '    <h6> ' + arraytam[i] + ' </h6>'
+    for (var i in arraycomptam) {
+      $("#tamanhos").append('<div class="col-25 tamanho" id="tamanho_' + arraycomptam[i] + '" onclick="seltamanho(this)">'
+        + '    <h6> ' + arraycomptam[i] + ' </h6>'
         + '  </div>')
     }
     $("#qtde").empty()
