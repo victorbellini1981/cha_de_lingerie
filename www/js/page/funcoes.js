@@ -830,6 +830,59 @@ function addSeparator(nStr) {
         arraycomptam.push(arraytam[k]);
       }
     }
+    for (var i in arraycomptam) {
+      if (arraycomptam[i] == 'PP') {
+        arraycomptam[i] = 1;
+      }
+      else if (arraycomptam[i] == 'P') {
+        arraycomptam[i] = 2;
+      }
+      else if (arraycomptam[i] == 'M') {
+        arraycomptam[i] = 3;
+      }
+      else if (arraycomptam[i] == 'G') {
+        arraycomptam[i] = 4;
+      }
+      else if (arraycomptam[i] == 'GG') {
+        arraycomptam[i] = 5;
+      }
+      else if (arraycomptam[i] == 'EG') {
+        arraycomptam[i] = 6;
+      }
+      else if (arraycomptam[i] == 'XG') {
+        arraycomptam[i] = 7;
+      }
+      else if (arraycomptam[i] == 'XXG') {
+        arraycomptam[i] = 8;
+      }
+    }
+    arraycomptam.sort();
+    for (var i in arraycomptam) {
+      if (arraycomptam[i] == 1) {
+        arraycomptam[i] = 'PP';
+      }
+      else if (arraycomptam[i] == 2) {
+        arraycomptam[i] = 'P';
+      }
+      else if (arraycomptam[i] == 3) {
+        arraycomptam[i] = 'M';
+      }
+      else if (arraycomptam[i] == 4) {
+        arraycomptam[i] = 'G';
+      }
+      else if (arraycomptam[i] == 5) {
+        arraycomptam[i] = 'GG';
+      }
+      else if (arraycomptam[i] == 6) {
+        arraycomptam[i] = 'EG';
+      }
+      else if (arraycomptam[i] == 7) {
+        arraycomptam[i] = 'XG';
+      }
+      else if (arraycomptam[i] == 8) {
+        arraycomptam[i] = 'XXG';
+      }
+    }
     // adiciona os tamanhos disponiveis de cada produto
     for (var i in arraycomptam) {
       $("#tamanhos").append('<div class="col-25 tamanho" id="tamanho_' + arraycomptam[i] + '" onclick="seltamanho(this)">'
