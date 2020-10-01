@@ -1438,7 +1438,7 @@
     width: 60% !important;
     margin-left: 20% !important; }
     #page1 li a {
-      right: 500px !important; }
+      right: 350px !important; }
     #page1 li .item-after a {
       margin-left: 30px !important; }
     #page1 li .item-after img {
@@ -1516,11 +1516,11 @@
       border-radius: 100% !important; }
   #page4 .recados {
     position: absolute;
-    margin-top: 2460px !important;
+    margin-top: 2400px !important;
     left: 22% !important;
     color: black !important; }
   #page4 .no-hairlines-md {
-    margin-top: 2490px;
+    margin-top: 2430px;
     left: 20% !important;
     position: absolute !important;
     width: 60% !important; }
